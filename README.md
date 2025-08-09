@@ -16,8 +16,8 @@ The workflow covers:
 ## Architecture
 
 TLC Data → S3 (Raw) → AWS Glue → Athena (Tables/Views) → QuickSight (Dashboard)
-                                                       → SageMaker (Models)
-                                                       → Lambda → Bedrock (Claude Sonnet 3.5)
+                                                       / SageMaker (Models)
+                                                       / Lambda → Bedrock (Claude Sonnet 3.5)
 
 ---
 
