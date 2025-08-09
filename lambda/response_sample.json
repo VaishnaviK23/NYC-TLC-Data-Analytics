@@ -1,0 +1,40 @@
+{
+    "statusCode": 200,
+    "body": {
+      "question": "Show total trips and revenue by hour for Manhattan pickups on 1st August 2024.",
+      "sql": "SELECT DATE_TRUNC('hour', tpep_pickup_datetime) AS pickup_hour,\n COUNT(*) AS total_trips,\n SUM(total_amount) AS total_revenue\n FROM nyc_taxi.yellow_curated y\nJOIN nyc_taxi.taxi_zone_lookup zpu ON y.pulocationid = zpu.LocationID\n WHERE y.year = 2024 \n  AND y.month = 8\n  AND DATE(y.tpep_pickup_datetime) = DATE '2024-08-01'\n  AND zpu.Borough = 'Manhattan'\n GROUP BY DATE_TRUNC('hour', tpep_pickup_datetime)\n ORDER BY pickup_hour\n LIMIT 100",
+      "columns": [
+        "pickup_hour",
+        "total_trips",
+        "total_revenue"
+      ],
+      "rows": [
+        ["2024-08-01 00:00:00.000", "1761", "39170.830000000096"],
+        ["2024-08-01 01:00:00.000", "825", "18041.000000000022"],
+        ["2024-08-01 02:00:00.000", "446", "9781.199999999984"],
+        ["2024-08-01 03:00:00.000", "271", "7089.67"],
+        ["2024-08-01 04:00:00.000", "267", "8607.14"],
+        ["2024-08-01 05:00:00.000", "474", "13792.769999999993"],
+        ["2024-08-01 06:00:00.000", "1467", "33557.44999999993"],
+        ["2024-08-01 07:00:00.000", "2908", "63521.389999999825"],
+        ["2024-08-01 08:00:00.000", "4668", "104418.48000000008"],
+        ["2024-08-01 09:00:00.000", "4923", "111443.06000000019"],
+        ["2024-08-01 10:00:00.000", "4771", "110083.41000000009"],
+        ["2024-08-01 11:00:00.000", "5013", "118592.1600000004"],
+        ["2024-08-01 12:00:00.000", "5576", "130651.81000000003"],
+        ["2024-08-01 13:00:00.000", "5891", "139692.45000000036"],
+        ["2024-08-01 14:00:00.000", "6251", "145266.14000000016"],
+        ["2024-08-01 15:00:00.000", "6159", "143546.48000000027"],
+        ["2024-08-01 16:00:00.000", "6469", "165764.36"],
+        ["2024-08-01 17:00:00.000", "7882", "201715.78000000125"],
+        ["2024-08-01 18:00:00.000", "8472", "204895.49"],
+        ["2024-08-01 19:00:00.000", "6440", "148963.33000000007"],
+        ["2024-08-01 20:00:00.000", "5896", "130203.40000000026"],
+        ["2024-08-01 21:00:00.000", "6979", "158373.21000000008"],
+        ["2024-08-01 22:00:00.000", "6649", "150024.0700000006"],
+        ["2024-08-01 23:00:00.000", "4096", "89857.08000000026"]
+      ],
+      "row_count": 24,
+      "narrative": "On August 1, 2024, Manhattan taxi trips peaked during the evening rush hour, with the highest number of trips (8,472) and revenue ($204,895) occurring between 6-7 PM. The data shows a clear pattern of increased activity during typical working hours, with a significant drop in both trips and revenue during early morning hours (2-5 AM)."
+    }
+  }
