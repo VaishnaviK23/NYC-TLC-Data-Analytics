@@ -45,7 +45,7 @@ TLC Data → S3 (Raw) → AWS Glue → Athena (Tables/Views) → QuickSight (Das
   - Tip percentage vs fare amount
   - Average tip by distance
 
-[Quicksight Dashboard.pdf](https://github.com/user-attachments/files/21694213/Quicksight.Dashboard.pdf)
+<img width="1077" height="1135" alt="Screenshot 2025-08-08 at 3 03 49 PM" src="https://github.com/user-attachments/assets/867d27cd-5915-4c5a-a426-1f12f9dab773" />
 
 
 ### 4. Predictive Modeling
