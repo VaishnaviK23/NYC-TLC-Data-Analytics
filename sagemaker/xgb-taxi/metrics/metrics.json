@@ -1,0 +1,27 @@
+{
+  "features_order": [
+    "pickup_hour",
+    "dow_idx",
+    "passenger_count",
+    "trip_distance",
+    "payment_type",
+    "fare_amount"
+  ],
+  "regression": {
+    "n_test": 73542,
+    "rmse": 2.560447565535145,
+    "mae": 1.297054596593154,
+    "mape_pct": 79.31955552765936,
+    "r2": 0.6541359333056419,
+    "baseline_rmse": 4.3537700057090305,
+    "rmse_improvement_vs_baseline_pct": 41.19010507726246
+  },
+  "classification": {
+    "n_test": 73542,
+    "accuracy": 0.9541758450953197,
+    "precision": 0.9440852993031651,
+    "recall": 0.9992890784679641,
+    "f1": 0.9709031255396304,
+    "auc": 0.9299152968185095
+  }
+}
