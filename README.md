@@ -55,6 +55,31 @@ TLC Data → S3 (Raw) → AWS Glue → Athena (Tables/Views) → QuickSight (Das
 - Used curated Athena data for training.
 - Deployed the models as SageMaker endpoints for inference.
 
+### Tip Amount Prediction (Regression Model)
+
+| Metric                               | Value        |
+|--------------------------------------|--------------|
+| Test Samples (n)                     | 73,542       |
+| RMSE                                 | 2.5604       |
+| MAE                                  | 1.2971       |
+| MAPE (%)                             | 79.32%       |
+| R²                                   | 0.6541       |
+| Baseline RMSE                        | 4.3538       |
+| RMSE Improvement vs Baseline (%)     | 41.19%       |
+
+---
+
+### Tip > 0 Classification Model
+
+| Metric       | Value    |
+|--------------|----------|
+| Test Samples | 73,542   |
+| Accuracy     | 95.42%   |
+| Precision    | 94.41%   |
+| Recall       | 99.93%   |
+| F1 Score     | 97.09%   |
+| AUC          | 92.99%   |
+
 ### 5. Conversational Analytics with Bedrock
 - Created an **AWS Lambda function** to:
   - Accept natural language questions
