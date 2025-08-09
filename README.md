@@ -67,8 +67,6 @@ TLC Data → S3 (Raw) → AWS Glue → Athena (Tables/Views) → QuickSight (Das
 | Baseline RMSE                        | 4.3538       |
 | RMSE Improvement vs Baseline (%)     | 41.19%       |
 
----
-
 ### Tip > 0 Classification Model
 
 | Metric       | Value    |
